@@ -55,13 +55,36 @@
             justify-content: center;
         }
 
+        /* slider image */
+        /* Slider container - Adjusting height for different screen sizes */
         .slider-container {
             position: relative;
-
-            height: 450px;
+            width: 100%;
+            height: 250px;
+            /* Default for small screens */
             overflow: hidden;
         }
 
+        /* Medium screens (md) */
+        @media (min-width: 640px) {
+
+            /* sm breakpoint */
+            .slider-container {
+                height: 350px;
+            }
+        }
+
+        /* Large screens (lg) */
+        @media (min-width: 1024px) {
+
+            /* lg breakpoint */
+            .slider-container {
+                height: 450px;
+                width: 100%;
+            }
+        }
+
+        /* Slide styling */
         .slide {
             position: absolute;
             width: 100%;
@@ -72,23 +95,34 @@
             opacity: 0;
         }
 
+        /* Active slide */
         .slide.active {
             opacity: 1;
         }
 
+        /* Overlay text styling */
         .overlay {
             position: absolute;
-            bottom: 20px;
+            bottom: 10%;
             left: 50%;
             transform: translateX(-50%);
             background: rgba(0, 0, 0, 0.6);
             color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            font-size: 20px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 16px;
             text-align: center;
         }
 
+        /* Larger font for overlay on bigger screens */
+        @media (min-width: 640px) {
+            .overlay {
+                font-size: 20px;
+                padding: 10px 20px;
+            }
+        }
+
+        /* Navigation button styling */
         .navigation {
             position: absolute;
             width: 100%;
@@ -96,8 +130,10 @@
             transform: translateY(-50%);
             display: flex;
             justify-content: space-between;
+            padding: 0 10px;
         }
 
+        /* Nav button */
         .nav-btn {
             background: rgba(0, 0, 0, 0.5);
             color: white;
@@ -107,10 +143,12 @@
             transition: background 0.3s;
         }
 
+        /* Hover effect */
         .nav-btn:hover {
             background: rgba(0, 0, 0, 0.8);
         }
 
+        /* Dots for slide indicators */
         .dots {
             position: absolute;
             bottom: 10px;
@@ -120,17 +158,27 @@
             gap: 5px;
         }
 
+        /* Dot styling */
         .dot {
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             background: white;
             border-radius: 50%;
             cursor: pointer;
             transition: background 0.3s;
         }
 
+        /* Active dot */
         .dot.active {
-            background: red;
+            background: rgb(0, 255, 26);
+        }
+
+        /* Increase dot size on larger screens */
+        @media (min-width: 640px) {
+            .dot {
+                width: 10px;
+                height: 10px;
+            }
         }
     </style>
 </head>
@@ -206,12 +254,13 @@
 
 
     </div>
+
     <!-- text -->
     <h1 class="mx-auto my-10 mt-20 text-4xl font-bold text-center glowing-border lg:w-3/4">SATBARIA HIGH SCHOOL SSC
         BATCH 2019</h1>
     <!-- slider img -->
-    <div class="max-w-3xl mx-auto mb-10 rounded-lg shadow-lg lg:w-full slider-container">
-        <div class="slide active" style="background-image: url('images/Ramadan24.jpg');">
+    <div class="w-full max-w-3xl mx-auto mb-10 rounded-lg shadow-lg slider-container">
+        <div class="slide active " style="background-image: url('images/Ramadan24.jpg');">
             <div class="overlay">Ramadan-2024</div>
         </div>
         <div class="slide" style="background-image: url('images/Ramadan-241.jpg');">
@@ -407,6 +456,8 @@
             const overlay = button.closest('.card').querySelector('.details-overlay');
             overlay.style.opacity = overlay.style.opacity === '1' ? '0' : '1';
         }
+
+
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         const dotsContainer = document.querySelector('.dots');
