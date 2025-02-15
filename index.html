@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SSC-2019</title>
-    <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="images/Logo1.png">
+    <!-- <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16"> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
     <style>
@@ -42,6 +43,16 @@
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
             border-radius: 15px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
         }
 
         .slider-container {
@@ -127,7 +138,7 @@
 <body class="p-1 bg-gray-100">
     <!-- navbar -->
     <!-- navbar -->
-    <div class="mt-0 bg-gradient-to-t from-[#EFEBE3] mb-20 ">
+    <div class="mt-0 bg-gradient-to-t from-[#EFEBE3] mb-20  ">
         <div>
             <nav class="fixed top-0 left-0 right-0 mx-auto lg:w-3/4">
                 <div class="px-4 py-2 bg-white rounded-lg shadow-lg navbar">
@@ -163,7 +174,7 @@
 
                         <!-- Logo -->
                         <div class="hidden sm:justify-end sm:flex">
-                            <img src="images/logo.png" alt="Logo" class="h-14">
+                            <img src="images/Logo1.png" alt="Logo" class="h-14">
                             <p></p>
                         </div>
 
@@ -183,7 +194,7 @@
                             class="w-32 font-bold text-white bg-green-800 btn hover:text-green-600">Register</button>
                     </div>
                     <div class="justify-end flex-1 lg:hidden ">
-                        <img src="images/logo.png" alt="Logo" class="h-14 ">
+                        <img src="images/Logo1.png" alt="Logo" class="h-14 ">
                     </div>
 
 
@@ -217,6 +228,7 @@
         <div class="dots"></div>
     </div>
 
+    <!-- Responsive Grid -->
     <div class="grid grid-cols-2 gap-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:w-3/4 ">
 
         <!-- Card Component -->
@@ -388,7 +400,13 @@
         </div>
 
     </div>
+
+
     <script>
+        function toggleDetails(button) {
+            const overlay = button.closest('.card').querySelector('.details-overlay');
+            overlay.style.opacity = overlay.style.opacity === '1' ? '0' : '1';
+        }
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         const dotsContainer = document.querySelector('.dots');

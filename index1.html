@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Border Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <style>
+        @keyframes rotate-border {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .glowing-border {
+            border-radius: 15px;
+            border: 4px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                conic-gradient(from 0deg, #ff00ff, #00ffff, #ff0000, #ff00ff) border-box;
+            animation:  3s linear infinite;
+        }
+
+        .details-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 15px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body class="p-6 bg-gray-100">
+    <h1 class="mx-auto mb-6 text-2xl font-bold text-center md:text-3xl lg:text-4xl glowing-border lg:w-3/4">
+        SATBARIA HIGH SCHOOL SSC BATCH 2019
+    </h1>
+
+    <!-- Responsive Grid -->
+    <div class="grid grid-cols-1 gap-4 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:w-3/4">
+        
+        <!-- Card Component -->
+        <div class="relative w-full max-w-xs p-3 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative avatar-container">
+                <img src="images/kabir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                <div class="p-2 details-overlay rounded-xl">
+                    <p>Father's Name: Darog Ali Biswas</p>
+                    <p>Mother's Name: Mst Salma Khatun</p>
+                    <p>Blood Group: O(+) Positive</p>
+                    <p>01743637814</p>
+                </div>
+            </div>
+            <h3 class="mt-4 text-lg font-bold">Md Humaon Kabir</h3>
+            <p class="text-sm text-gray-600">Village: Khayran</p>
+            <div class="mt-4 button-container">
+                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                    onclick="toggleDetails(this)">
+                    Show Details
+                </button>
+            </div>
+        </div>
+
+        <!-- Duplicate Cards -->
+        <div class="relative w-full max-w-xs p-3 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative avatar-container">
+                <img src="images/kabir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                <div class="p-2 details-overlay rounded-xl">
+                    <p>Father's Name: Darog Ali Biswas</p>
+                    <p>Mother's Name: Mst Salma Khatun</p>
+                    <p>Blood Group: O(+) Positive</p>
+                    <p>01743637814</p>
+                </div>
+            </div>
+            <h3 class="mt-4 text-lg font-bold">Md Humaon Kabir</h3>
+            <p class="text-sm text-gray-600">Village: Khayran</p>
+            <div class="mt-4 button-container">
+                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                    onclick="toggleDetails(this)">
+                    Show Details
+                </button>
+            </div>
+        </div>
+
+        <div class="relative w-full max-w-xs p-3 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative avatar-container">
+                <img src="images/kabir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                <div class="p-2 details-overlay rounded-xl">
+                    <p>Father's Name: Darog Ali Biswas</p>
+                    <p>Mother's Name: Mst Salma Khatun</p>
+                    <p>Blood Group: O(+) Positive</p>
+                    <p>01743637814</p>
+                </div>
+            </div>
+            <h3 class="mt-4 text-lg font-bold">Md Humaon Kabir</h3>
+            <p class="text-sm text-gray-600">Village: Khayran</p>
+            <div class="mt-4 button-container">
+                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                    onclick="toggleDetails(this)">
+                    Show Details
+                </button>
+            </div>
+        </div>
+
+        <div class="relative w-full max-w-xs p-3 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative avatar-container">
+                <img src="images/kabir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                <div class="p-2 details-overlay rounded-xl">
+                    <p>Father's Name: Darog Ali Biswas</p>
+                    <p>Mother's Name: Mst Salma Khatun</p>
+                    <p>Blood Group: O(+) Positive</p>
+                    <p>01743637814</p>
+                </div>
+            </div>
+            <h3 class="mt-4 text-lg font-bold">Md Humaon Kabir</h3>
+            <p class="text-sm text-gray-600">Village: Khayran</p>
+            <div class="mt-4 button-container">
+                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                    onclick="toggleDetails(this)">
+                    Show Details
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleDetails(button) {
+            const overlay = button.closest('.card').querySelector('.details-overlay');
+            overlay.style.opacity = overlay.style.opacity === '1' ? '0' : '1';
+        }
+    </script>
+</body>
+
+</html>
