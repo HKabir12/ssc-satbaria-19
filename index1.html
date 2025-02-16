@@ -1,169 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image Slider</title>
+    <title>Glowing Border Card Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        @keyframes rotate-border {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(360deg);
+            }
         }
-
+        .glowing-border {
+            border-radius: 15px;
+            border: 4px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                conic-gradient(from 0deg, #ff00ff, #00ffff, #ff0000, #ff00ff) border-box;
+            animation: rotate-border 3s linear infinite;
+        }
         .slider-container {
             position: relative;
-            width: 100%;
-            max-width: 100vw;
-            height: 100vh;
             overflow: hidden;
+            max-width: 80%;
+            margin: auto;
         }
-
-        .slide {
+        .slider {
+            display: flex;
+            gap: 1rem;
+            transition: transform 0.5s ease-in-out;
+        }
+        .arrow {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            transition: opacity 1s ease-in-out;
-            opacity: 0;
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        .overlay {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        .navigation {
-            position: absolute;
-            width: 100%;
             top: 50%;
             transform: translateY(-50%);
-            display: flex;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-
-        .nav-btn {
             background: rgba(0, 0, 0, 0.5);
             color: white;
-            padding: 15px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background 0.3s;
             border: none;
-            font-size: 24px;
-        }
-
-        .nav-btn:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-
-        .dots {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            background: white;
-            border-radius: 50%;
+            padding: 10px;
             cursor: pointer;
-            transition: background 0.3s;
+            z-index: 10;
         }
-
-        .dot.active {
-            background: red;
+        .left-arrow {
+            left: 10px;
+        }
+        .right-arrow {
+            right: 10px;
         }
     </style>
 </head>
-<body>
-    <div class="slider-container">
-        <div class="slide active" style="background-image: url('images/Ramadan24.jpg');">
-            <div class="overlay">Ramadan-2024</div>
-        </div>
-        <div class="slide" style="background-image: url('images/Ramadan-241.jpg');">
-            <div class="overlay">Ramadan-2024</div>
-        </div>
-        <div class="slide" style="background-image: url('images/Ramadan-23.jpg');">
-            <div class="overlay">Ramadan-2023</div>
-        </div>
 
-        <div class="navigation">
-            <button class="nav-btn" id="prevBtn">&#10094;</button>
-            <button class="nav-btn" id="nextBtn">&#10095;</button>
+<body class="p-6 bg-gray-100">
+    <h1 class="mx-auto mb-6 text-2xl font-bold text-center md:text-3xl lg:text-4xl glowing-border lg:w-3/4">
+        SATBARIA HIGH SCHOOL SSC BATCH 2019
+    </h1>
+
+    <div class="slider-container">
+        <div class="arrow-container">
+            <button class="arrow left-arrow" onclick="moveSlider(-1)">&#9665;</button>
         </div>
-        <div class="dots"></div>
+        <div class="slider">
+            <div class="w-full max-w-xs p-3 text-center bg-white shadow-xl card glowing-border">
+                <img src="images/kabir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                <h3 class="mt-4 text-lg font-bold">Md Humaon Kabir</h3>
+                <p class="text-sm text-gray-600">Village: Khayran</p>
+            </div>
+            <div class="w-full max-w-xs p-3 text-center bg-white shadow-xl card glowing-border">
+                <img src="images/kabir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                <h3 class="mt-4 text-lg font-bold">Md Humaon Kabir</h3>
+                <p class="text-sm text-gray-600">Village: Khayran</p>
+            </div>
+            <div class="w-full max-w-xs p-3 text-center bg-white shadow-xl card glowing-border">
+                <img src="images/kabir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                <h3 class="mt-4 text-lg font-bold">Md Humaon Kabir</h3>
+                <p class="text-sm text-gray-600">Village: Khayran</p>
+            </div>
+        </div>
+        <div class="arrow-container">
+            <button class="arrow right-arrow" onclick="moveSlider(1)">&#9655;</button>
+        </div>
     </div>
 
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dotsContainer = document.querySelector('.dots');
-        let autoSlideInterval;
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-                dots[i].classList.toggle('active', i === index);
-            });
+        let currentIndex = 0;
+        function moveSlider(direction) {
+            const slider = document.querySelector('.slider');
+            const cards = document.querySelectorAll('.card');
+            const totalCards = cards.length;
+            const cardWidth = cards[0].offsetWidth + 16; 
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = 0;
+            if (currentIndex >= totalCards - 1) currentIndex = totalCards - 1;
+            slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
         }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        function createDots() {
-            slides.forEach((_, index) => {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                if (index === 0) dot.classList.add('active');
-                dot.addEventListener('click', () => {
-                    currentSlide = index;
-                    showSlide(index);
-                    resetAutoSlide();
-                });
-                dotsContainer.appendChild(dot);
-            });
-        }
-
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(nextSlide, 4000);
-        }
-
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
-        }
-
-        document.getElementById('nextBtn').addEventListener('click', () => { nextSlide(); resetAutoSlide(); });
-        document.getElementById('prevBtn').addEventListener('click', () => { prevSlide(); resetAutoSlide(); });
-        createDots();
-        const dots = document.querySelectorAll('.dot');
-        startAutoSlide();
     </script>
 </body>
 </html>
