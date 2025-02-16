@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SSC-2019</title>
     <link rel="icon" href="images/Logo1.png">
-    <!-- <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16"> -->
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
@@ -186,6 +187,7 @@
 </head>
 
 <body class="p-1 bg-gray-100">
+
     <!-- navbar -->
     <!-- navbar -->
     <div class="mt-0 bg-gradient-to-t from-[#EFEBE3] mb-20  ">
@@ -218,8 +220,8 @@
 
                                 </li>
                                 <li><button class="w-full mt-2 btn btn-outline"><a href="login.html">Login</a>
-                                    
-                                </button></li>
+
+                                    </button></li>
                                 <li><button class="w-full mt-2 text-white btn btn-success">Register</button></li>
                             </ul>
                         </div>
@@ -286,1030 +288,1059 @@
         </div>
 
         <div class="navigation">
-            <button class="nav-btn" id="prevBtn">❮</button>
-            <button class="nav-btn" id="nextBtn">❯</button>
+            <button class="nav-btn" id="prevBtn1">❮</button>
+            <button class="nav-btn" id="nextBtn1">❯</button>
         </div>
         <div class="dots"></div>
     </div>
 
-
     <!-- Responsive Grid -->
-    <div class="grid grid-cols-2 gap-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:w-3/4 slider">
+    <div id="cardContainer" class="relative flex w-full overflow-hidden">
+        <div class="grid grid-cols-2 gap-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:w-3/4 slider"
+            id="cardWrapper">
+            <!-- Cards go here -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/kabir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Darog Ali Biswas</p>
+                        <p>Mother's Name: Mst Salma Khatun</p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01743637814</p>
+                        <p>Jahangirnagar University</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Md Humaon Kabir</h3>
+                <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
+                <p class="text-sm text-gray-600">Village: Khayran</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
 
-        <!-- Card Component -->
+            <!-- salim -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/salim.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:Abul Kashem</p>
+                        <p>Mother's Name:Mst Shelina Khatun</p>
+                        <p>Blood Group:O(+) Positive</p>
+                        <p>01763385504</p>
+                        <p>RUET-Rajashahi</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Humaon Ahmmed</h3>
+                <p class="text-sm text-gray-600">Village: Khayran</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
+            <!-- ashik -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/ashik.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:Abul Hossen</p>
+                        <p>Mother's Name: Mst Shamsun Nahar</p>
+                        <p>Blood Group: B(+) Positive</p>
+                        <p>01743637814</p>
+                        <p>PUST-Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Ashikur Rahman</h3>
+                <p class="text-sm text-gray-600">Village: Khayran</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
 
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/kabir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Darog Ali Biswas</p>
-                    <p>Mother's Name: Mst Salma Khatun</p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01743637814</p>
-                    <p>Jahangirnagar University</p>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/azad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Md Ronju Sheikh</p>
+                        <p>Mother's Name: Mst Abc Khatun</p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01743637814</p>
+                        <p>Pabna Edward Colleage-Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Humayun Azad</h3>
+                <p class="text-sm text-gray-600">Village: Khayran</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Md Humaon Kabir</h3>
-            <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
-            <p class="text-sm text-gray-600">Village: Khayran</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
+            <!-- sikto -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/sikto.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:Md Sahidullah </p>
+                        <p>Mother's Name:Mst Aklima Pervin</p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01302299706</p>
+                        <p>PUST-University</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Asif Redoan Sikto</h3>
+                <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
+                <p class="text-sm text-gray-700">Village:Satbaria</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
             </div>
-        </div>
+            <!-- mithu -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/mithu.jpg" alt="Mithu" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:Md.Nazim Uddin</p>
+                        <p>Mother's Name: Mst.Nasima Khatun</p>
+                        <p>Blood Group: A(+) Positive</p>
+                        <p>01722509905</p>
+                        <p>Dhaka,Bangladesh-JnU</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Md.Kamrujjaman Mithu</h3>
+                <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
+                <p class="text-sm text-gray-600">Village:Naruhati</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/rifat.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Azizul Islam</p>
+                        <p>Mother's Name: Rikta Parvin</p>
+                        <p>Blood Group: A(+) Positive</p>
+                        <p>01773025371 </p>
+                        <p>Rajshahi University</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Arafatul Islam Rifat</h3>
+                <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
+                <p class="text-sm text-gray-600">Village:Gabgachi</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/amir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Md. Sultan Sheikh</p>
+                        <p>Mother's Name: Mst:Farida Khatun</p>
+                        <p>Blood Group: B(+) Positive</p>
+                        <p>01797788184 </p>
+                        <p>Shahid Sergent Zahurul Haq Hall,Dhaka University </p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Md.Amir Faysal</h3>
+                <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
+                <p class="text-sm text-gray-600">Village:Kachuri</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
+            <!-- zabir -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/zabir.jpg" alt="Zabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: ABC</p>
+                        <p>Mother's Name: Mst Salma Khatun</p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01743637814</p>
+                        <p>Pabna-Edward</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Zabir Hasan</h3>
+                <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
+                <p class="text-sm text-gray-600">Village:Shyamnagar</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
 
-        <!-- salim -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/salim.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:Abul Kashem</p>
-                    <p>Mother's Name:Mst Shelina Khatun</p>
-                    <p>Blood Group:O(+) Positive</p>
-                    <p>01763385504</p>
-                    <p>RUET-Rajashahi</p>
+            <!-- Duplicate Cards -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/ashraful.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Late Mokbul Hosain</p>
+                        <p>Mother's Name: Mst Salma Khatun</p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01740725047</p>
+                        <p>SM hall, Edward college, pabna </p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Md Ashraful Islam</h3>
+                <p class="text-sm text-gray-600">Village:Kacuri</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Humaon Ahmmed</h3>
-            <p class="text-sm text-gray-600">Village: Khayran</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- ashik -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/ashik.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:Abul Hossen</p>
-                    <p>Mother's Name: Mst Shamsun Nahar</p>
-                    <p>Blood Group: B(+) Positive</p>
-                    <p>01743637814</p>
-                    <p>PUST-Pabna</p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">Ashikur Rahman</h3>
-            <p class="text-sm text-gray-600">Village: Khayran</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
 
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/azad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Md Ronju Sheikh</p>
-                    <p>Mother's Name: Mst Abc Khatun</p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01743637814</p>
-                    <p>Pabna Edward Colleage-Pabna</p>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/saki.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:Md.Hobibor Rahman</p>
+                        <p>Mother's Name: Mst Salma Khatun</p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01301899862 </p>
+                        <p>Faridpur medical college, Faridpur</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Sakib Sardar</h3>
+                <p class="text-sm text-gray-600">Village:Kuripara</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Humayun Azad</h3>
-            <p class="text-sm text-gray-600">Village: Khayran</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- sikto -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/sikto.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:Md Sahidullah </p>
-                    <p>Mother's Name:Mst Aklima Pervin</p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01302299706</p>
-                    <p>PUST-University</p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">Asif Redoan Sikto</h3>
-            <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
-            <p class="text-sm text-gray-700">Village:Satbaria</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- mithu -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/mithu.jpg" alt="Mithu" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:Md.Nazim Uddin</p>
-                    <p>Mother's Name: Mst.Nasima Khatun</p>
-                    <p>Blood Group: A(+) Positive</p>
-                    <p>01722509905</p>
-                    <p>Dhaka,Bangladesh-JnU</p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">Md.Kamrujjaman Mithu</h3>
-            <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
-            <p class="text-sm text-gray-600">Village:Naruhati</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/rifat.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Azizul Islam</p>
-                    <p>Mother's Name: Rikta Parvin</p>
-                    <p>Blood Group: A(+) Positive</p>
-                    <p>01773025371 </p>
-                    <p>Rajshahi University</p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">Arafatul Islam Rifat</h3>
-            <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
-            <p class="text-sm text-gray-600">Village:Gabgachi</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/amir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Md. Sultan Sheikh</p>
-                    <p>Mother's Name: Mst:Farida Khatun</p>
-                    <p>Blood Group: B(+) Positive</p>
-                    <p>01797788184 </p>
-                    <p>Shahid Sergent Zahurul Haq Hall,Dhaka University </p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">Md.Amir Faysal</h3>
-            <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
-            <p class="text-sm text-gray-600">Village:Kachuri</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- zabir -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/zabir.jpg" alt="Zabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: ABC</p>
-                    <p>Mother's Name: Mst Salma Khatun</p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01743637814</p>
-                    <p>Pabna-Edward</p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">Zabir Hasan</h3>
-            <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
-            <p class="text-sm text-gray-600">Village:Shyamnagar</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
 
-        <!-- Duplicate Cards -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/ashraful.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Late Mokbul Hosain</p>
-                    <p>Mother's Name: Mst Salma Khatun</p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01740725047</p>
-                    <p>SM hall, Edward college, pabna </p>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/nishad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Abdur Rashid</p>
+                        <p>Mother's Name: Mst Nasima Khatun</p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01718674312</p>
+                        <p>Dhaka</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Niaz Morshad Nishad</h3>
+                <p class="text-sm text-gray-600">Village:Satbaria</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Md Ashraful Islam</h3>
-            <p class="text-sm text-gray-600">Village:Kacuri</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
+            <!-- sajid -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/sajid.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Abdus Salam Sheikh </p>
+                        <p>Mother's Name: Mst. Nahida Khatun </p>
+                        <p>Blood Group: A(-) Negative</p>
+                        <p> 01736769601</p>
+                        <p>Daffodil International University-Savar</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Sajid Hasan</h3>
+                <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
+                <p class="text-sm text-gray-700">Village:Satbaria</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
             </div>
-        </div>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/zihad.jpg" alt="Mithu" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Zinnah Biswas</p>
+                        <p>Mother's Name: Mst Marium</p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01743637814</p>
+                        <p>Shahid Bulbul Colleage Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Zihad Biswas</h3>
 
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/saki.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:Md.Hobibor Rahman</p>
-                    <p>Mother's Name: Mst Salma Khatun</p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01301899862 </p>
-                    <p>Faridpur medical college, Faridpur</p>
+                <p class="text-sm text-gray-600">Village:Khayran</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Sakib Sardar</h3>
-            <p class="text-sm text-gray-600">Village:Kuripara</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/antu.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Uzzal Kumar Sarkar </p>
+                        <p>Mother's Name: Joyanti Rani Sarkar </p>
+                        <p>Blood Group: A(+) Positive</p>
+                        <p>01787-911831</p>
+                        <p>01866-359538</p>
+                        <p>Faridpur Sadar, Faridpur</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Antu Kumar Sarkar </h3>
+                <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
+                <p class="text-sm text-gray-600">Village:Kakian</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
             </div>
-        </div>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/ashik-juna.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:Late Abdur Razzak khan
+                        </p>
+                        <p>Mother's Name:Late shaleha khatun</p>
+                        <p>Blood Group: B(+) Positive</p>
+                        <p>01616234642</p>
+                        <p>Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">MD Ashiquzzaman Khan</h3>
+                <p class="text-sm text-gray-600">Village:Ramchandrapur</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/opi.png" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:Md Osman pramanik
+                        </p>
+                        <p>Mother's Name:Anowara Khatun</p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01767737699 / +971502742944 </p>
+                        <p>Dubai</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Mehrab Hasan Opi
+                </h3>
+                <p class="text-sm text-gray-600">Village:Shamnagar</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/robiul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:MD: Mofazzal pk.
+                        </p>
+                        <p>Mother's Name:Mst.Marium Khatun
+                        </p>
+                        <p>Blood Group:A(+) Positive</p>
+                        <p>01765645089</p>
+                        <p>Dhaka</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">MD: Robiul Islam
+                </h3>
+                <p class="text-sm text-gray-600">Village:Manikhat</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/angkur.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:সুজল সরকার
+                        </p>
+                        <p>Mother's Name:স্বপ্না রানী
+                        </p>
+                        <p>Blood Group:O(+) Positive</p>
+                        <p>01308-274035 </p>
+                        <p>সরাইল,ব্রাক্ষণবাড়িয়া</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">অংকুর কুমার সরকার (ওভিক)
 
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/nishad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Abdur Rashid</p>
-                    <p>Mother's Name: Mst Nasima Khatun</p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01718674312</p>
-                    <p>Dhaka</p>
+                </h3>
+                <p class="text-sm text-gray-600">Village:কাঁকিয়ান
+                </p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Niaz Morshad Nishad</h3>
-            <p class="text-sm text-gray-600">Village:Satbaria</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- sajid -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/sajid.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Abdus Salam Sheikh </p>
-                    <p>Mother's Name: Mst. Nahida Khatun </p>
-                    <p>Blood Group: A(-) Negative</p>
-                    <p> 01736769601</p>
-                    <p>Daffodil International University-Savar</p>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/abdullah.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:MD. Motaleb Hossain.
+                        </p>
+                        <p>Mother's Name:Mst. Jahanara Khatun
+                        </p>
+                        <p>Blood Group:B(+) Positive</p>
+                        <p>+8801819790779</p>
+                        <p>Uttara-Dhaka</p>
+                    </div>
                 </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">Sajid Hasan</h3>
-            <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
-            <p class="text-sm text-gray-700">Village:Satbaria</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/zihad.jpg" alt="Mithu" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Zinnah Biswas</p>
-                    <p>Mother's Name: Mst Marium</p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01743637814</p>
-                    <p>Shahid Bulbul Colleage Pabna</p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">Zihad Biswas</h3>
+                <h3 class="mt-4 text-lg font-bold">Abdullah Sheikh
 
-            <p class="text-sm text-gray-600">Village:Khayran</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/antu.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Uzzal Kumar Sarkar </p>
-                    <p>Mother's Name: Joyanti Rani Sarkar </p>
-                    <p>Blood Group: A(+) Positive</p>
-                    <p>01787-911831</p>
-                    <p>01866-359538</p>
-                    <p>Faridpur Sadar, Faridpur</p>
+                </h3>
+                <p class="text-sm text-gray-600">Village:Jonaramchandrapur.
+                </p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Antu Kumar Sarkar </h3>
-            <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
-            <p class="text-sm text-gray-600">Village:Kakian</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/ashik-juna.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:Late Abdur Razzak khan
-                    </p>
-                    <p>Mother's Name:Late shaleha khatun</p>
-                    <p>Blood Group: B(+) Positive</p>
-                    <p>01616234642</p>
-                    <p>Pabna</p>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/shovon.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:Late Babul Molla
+                        </p>
+                        <p>Mother's Name:Marzia Khatun
+                        </p>
+                        <p>Blood Group:O(+) Positive</p>
+                        <p>+880 1969-858771</p>
+                        <p>Dhaka-Purbachal</p>
+                    </div>
                 </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">MD Ashiquzzaman Khan</h3>
-            <p class="text-sm text-gray-600">Village:Ramchandrapur</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/opi.png" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:Md Osman pramanik
-                    </p>
-                    <p>Mother's Name:Anowara Khatun</p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01767737699 / +971502742944 </p>
-                    <p>Dubai</p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">Mehrab Hasan Opi
-            </h3>
-            <p class="text-sm text-gray-600">Village:Shamnagar</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/robiul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:MD: Mofazzal pk.
-                    </p>
-                    <p>Mother's Name:Mst.Marium Khatun
-                    </p>
-                    <p>Blood Group:A(+) Positive</p>
-                    <p>01765645089</p>
-                    <p>Dhaka</p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">MD: Robiul Islam
-            </h3>
-            <p class="text-sm text-gray-600">Village:Manikhat</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/angkur.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:সুজল সরকার
-                    </p>
-                    <p>Mother's Name:স্বপ্না রানী
-                    </p>
-                    <p>Blood Group:O(+) Positive</p>
-                    <p>01308-274035 </p>
-                    <p>সরাইল,ব্রাক্ষণবাড়িয়া</p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">অংকুর কুমার সরকার (ওভিক)
+                <h3 class="mt-4 text-lg font-bold">Shovon Molla
 
-            </h3>
-            <p class="text-sm text-gray-600">Village:কাঁকিয়ান
-            </p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/abdullah.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:MD. Motaleb Hossain.
-                    </p>
-                    <p>Mother's Name:Mst. Jahanara Khatun
-                    </p>
-                    <p>Blood Group:B(+) Positive</p>
-                    <p>+8801819790779</p>
-                    <p>Uttara-Dhaka</p>
+                </h3>
+                <p class="text-sm text-gray-600">Village:Kuripara
+                </p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Abdullah Sheikh
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/riyad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:জাকির হোসেন
+                        </p>
+                        <p>Mother's Name:সাবরিনা পারভীন
+                        </p>
+                        <p>Blood Group:O(+) Positive</p>
+                        <p>01303-298984</p>
+                        <p>Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">তৌফিক আহমেদ রিয়াদ
 
-            </h3>
-            <p class="text-sm text-gray-600">Village:Jonaramchandrapur.
-            </p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/shovon.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:Late Babul Molla
-                    </p>
-                    <p>Mother's Name:Marzia Khatun
-                    </p>
-                    <p>Blood Group:O(+) Positive</p>
-                    <p>+880 1969-858771</p>
-                    <p>Dhaka-Purbachal</p>
+                </h3>
+                <p class="text-sm text-gray-600">Village:Upendranagar
+                </p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Shovon Molla
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/nasir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:Md Abdur Razzak Sheikh
+                        </p>
+                        <p>Mother's Name:Mst Beuti Begum
+                        </p>
+                        <p>Blood Group:O(+) Positive</p>
+                        <p> 01946689480 </p>
+                        <p>Dhaka</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Md Rabbi Hasan Nasir
 
-            </h3>
-            <p class="text-sm text-gray-600">Village:Kuripara
-            </p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/riyad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:জাকির হোসেন
-                    </p>
-                    <p>Mother's Name:সাবরিনা পারভীন
-                    </p>
-                    <p>Blood Group:O(+) Positive</p>
-                    <p>01303-298984</p>
-                    <p>Pabna</p>
+                </h3>
+                <p class="text-sm text-gray-600">Village:Gupinpur
+                </p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">তৌফিক আহমেদ রিয়াদ
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/ratul.jpg" alt="Ratul" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name:Robiul Islam
+                        </p>
+                        <p>Mother's Name:Rokshana Khatun
+                        </p>
+                        <p>Blood Group:O(+) Positive</p>
+                        <p> +880 1701-080569 </p>
+                        <p>Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Ratul Hosan
 
-            </h3>
-            <p class="text-sm text-gray-600">Village:Upendranagar
-            </p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/nasir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:Md Abdur Razzak Sheikh
-                    </p>
-                    <p>Mother's Name:Mst Beuti Begum
-                    </p>
-                    <p>Blood Group:O(+) Positive</p>
-                    <p> 01946689480 </p>
-                    <p>Dhaka</p>
+                </h3>
+                <p class="text-sm text-gray-600">Village:Cancuri
+                </p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Md Rabbi Hasan Nasir
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/babul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Abc</p>
+                        <p>Mother's Name: Mst Salma Khatun</p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01743637814</p>
+                        <p>Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Babul Hossen</h3>
+                <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
+                <p class="text-sm text-gray-600">Village:Village: Khayran</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/jihad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Md Solim Molla</p>
+                        <p>Mother's Name: Mst Shahida Khatun</p>
+                        <p>Blood Group: AB(+) Positive</p>
+                        <p>01874733298</p>
+                        <p>Dhaka</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Md Jehad Molla </h3>
+                <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
+                <p class="text-sm text-gray-600">Village: Khayran</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/tuhin.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Abc</p>
+                        <p>Mother's Name: Mst Salma Khatun</p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01743637814</p>
+                        <p>Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Tuhin Sardar </h3>
+                <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
+                <p class="text-sm text-gray-600">Village:Upendranagar</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/hossain.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Md. Abul Kashem Biswas</p>
+                        <p>Mother's Name: Mst. Asma Khatun</p>
+                        <p>Blood Group: B(+) Positive</p>
+                        <p>01760587566</p>
+                        <p>Edward College Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Md. Hossain Biswas
+                </h3>
+                <p class="text-sm text-gray-600">Gupinpur</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/atik.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: MD. Monjed Ali Sheikh</p>
+                        <p>Mother's Name: Mst, Champa Khatun </p>
+                        <p>Blood Group: B(+) Positive</p>
+                        <p>01968217812 </p>
+                        <p>Edward College Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">MD.Real Ahmed Atik
+                </h3>
+                <p class="text-sm text-gray-600">Village:Kachuri </p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/shakil.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Abc</p>
+                        <p>Mother's Name: abc </p>
+                        <p>Blood Group: B(+) Positive</p>
+                        <p>01968217812 </p>
+                        <p>Edward College Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Shakil Hossain
+                </h3>
+                <p class="text-sm text-gray-600">Village:Kachuri </p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
 
-            </h3>
-            <p class="text-sm text-gray-600">Village:Gupinpur
-            </p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/ratul.jpg" alt="Ratul" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name:Robiul Islam
-                    </p>
-                    <p>Mother's Name:Rokshana Khatun
-                    </p>
-                    <p>Blood Group:O(+) Positive</p>
-                    <p> +880 1701-080569 </p>
-                    <p>Pabna</p>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/bulbul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Allek Sheikh</p>
+                        <p>Mother's Name: Bulu Khatun </p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01787-914662 </p>
+                        <p>Edward College Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Bulbul Hossain
+                </h3>
+                <p class="text-sm text-gray-600">Village:Gupinpur</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Ratul Hosan
-
-            </h3>
-            <p class="text-sm text-gray-600">Village:Cancuri
-            </p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/babul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Abc</p>
-                    <p>Mother's Name: Mst Salma Khatun</p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01743637814</p>
-                    <p>Pabna</p>
+            <!-- kiiron -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/kiron.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Allek Sheikh</p>
+                        <p>Mother's Name: Bulu Khatun </p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01787-914662 </p>
+                        <p>Edward College Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Muhammad Kiron Sordar
+                </h3>
+                <p class="text-sm text-gray-600">Village:Kuripara</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Babul Hossen</h3>
-            <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
-            <p class="text-sm text-gray-600">Village:Village: Khayran</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/jihad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Md Solim Molla</p>
-                    <p>Mother's Name: Mst Shahida Khatun</p>
-                    <p>Blood Group: AB(+) Positive</p>
-                    <p>01874733298</p>
-                    <p>Dhaka</p>
+            <!-- shawon -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/Shayon.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: ABc</p>
+                        <p>Mother's Name: BCA </p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01787-914662 </p>
+                        <p>Edward College Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Shawon
+                </h3>
+                <p class="text-sm text-gray-600">Village:Kuripara</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Md Jehad Molla </h3>
-            <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
-            <p class="text-sm text-gray-600">Village: Khayran</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/tuhin.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Abc</p>
-                    <p>Mother's Name: Mst Salma Khatun</p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01743637814</p>
-                    <p>Pabna</p>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/soyad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: ABc</p>
+                        <p>Mother's Name: BCA </p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01787-914662 </p>
+                        <p>Edward College Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Soyad Islam
+                </h3>
+                <p class="text-sm text-gray-600">Village:Kuripara</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Tuhin Sardar </h3>
-            <!-- <h3>মোঃ হুমায়ন কবির</h3> -->
-            <p class="text-sm text-gray-600">Village:Upendranagar</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/hossain.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Md. Abul Kashem Biswas</p>
-                    <p>Mother's Name: Mst. Asma Khatun</p>
-                    <p>Blood Group: B(+) Positive</p>
-                    <p>01760587566</p>
-                    <p>Edward College Pabna</p>
+            <!-- alif -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/alif.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Abul Bashar Mukti</p>
+                        <p>Mother's Name: Mst Shema Khatun </p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01756988222 </p>
+                        <p>Bulbul College Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Alif Hossain
+                </h3>
+                <p class="text-sm text-gray-600">Village:Shayamnagar</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Md. Hossain Biswas
-            </h3>
-            <p class="text-sm text-gray-600">Gupinpur</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/atik.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: MD. Monjed Ali Sheikh</p>
-                    <p>Mother's Name: Mst, Champa Khatun </p>
-                    <p>Blood Group: B(+) Positive</p>
-                    <p>01968217812 </p>
-                    <p>Edward College Pabna</p>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/tonmoy.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Topon Sorkar</p>
+                        <p>Mother's Name: Kolpona Sorkar</p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01516537218 </p>
+                        <p>Rajbari government College,Rajbari</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Tonmoy Sorkar
+                </h3>
+                <p class="text-sm text-gray-600">Village:Satbaria</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">MD.Real Ahmed Atik
-            </h3>
-            <p class="text-sm text-gray-600">Village:Kachuri </p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/shakil.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Abc</p>
-                    <p>Mother's Name: abc </p>
-                    <p>Blood Group: B(+) Positive</p>
-                    <p>01968217812 </p>
-                    <p>Edward College Pabna</p>
+            <!-- rabbi -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/rabbi.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: মো : রান্নু শেখ </p>
+                        <p>Mother's Name: মোছা : মুরশিদা খাতুন </p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>+880 1309-501178 </p>
+                        <p>মালেশিয়া</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">রাব্বি </h3>
+                <p class="text-sm text-gray-600">Village:কাকিয়ান</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Shakil Hossain
-            </h3>
-            <p class="text-sm text-gray-600">Village:Kachuri </p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/bulbul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Allek Sheikh</p>
-                    <p>Mother's Name: Bulu Khatun </p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01787-914662 </p>
-                    <p>Edward College Pabna</p>
+            <!-- anik mahmud -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/anik-mah.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: জিলাল প্রামানিক </p>
+                        <p>Mother's Name: হালিমা খাতুন </p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>+880 1766-357701 </p>
+                        <p>সিঙ্গাপুর </p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">মো অনিক মাহামুদ
+                </h3>
+                <p class="text-sm text-gray-600">Village:সাতবাড়ীয়া</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Bulbul Hossain
-            </h3>
-            <p class="text-sm text-gray-600">Village:Gupinpur</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- kiiron -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/kiron.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Allek Sheikh</p>
-                    <p>Mother's Name: Bulu Khatun </p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01787-914662 </p>
-                    <p>Edward College Pabna</p>
+            <!-- Shahin -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/shahin.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Md.Osman Goni Sheikh </p>
+                        <p>Mother's Name: Mst.Taslima Khatun </p>
+                        <p>Blood Group: O(-) Positive</p>
+                        <p>01810340599</p>
+                        <p>Ashulia Savar Dhaka </p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Md Shahin Hossain
+                </h3>
+                <p class="text-sm text-gray-600">Village:Shayamnagar</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Muhammad Kiron Sordar
-            </h3>
-            <p class="text-sm text-gray-600">Village:Kuripara</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- shawon -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/Shayon.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: ABc</p>
-                    <p>Mother's Name: BCA </p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01787-914662 </p>
-                    <p>Edward College Pabna</p>
+            <!-- anik -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/anik.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Arun Kumar Biswas </p>
+                        <p>Mother's Name: Aunjona Rani Biswas </p>
+                        <p>Blood Group: O(+) Positive</p>
+                        <p>01760314156</p>
+                        <p>Nowakhali, Ramganj, laxmipur. </p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Anik Biswas
+                </h3>
+                <p class="text-sm text-gray-600">Village:Vatpara</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Shawon
-            </h3>
-            <p class="text-sm text-gray-600">Village:Kuripara</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/soyad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: ABc</p>
-                    <p>Mother's Name: BCA </p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01787-914662 </p>
-                    <p>Edward College Pabna</p>
+            <!-- jolil -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/jolil.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: MD. MOFIZUDDIN PRAMANIK </p>
+                        <p>Mother's Name: MST. JULEKHA KHATUN </p>
+                        <p>Blood Group: A(+) Positive</p>
+                        <p> 08063831903</p>
+                        <p>Kobe city ,Japan</p>
+                        <p class="w-10 h-8 bg-green-400"><i class="w-10 h-8 fa-duotone fa-solid fa-jet-fighter-up"></i>
+                        </p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Md Abdul Jolil</h3>
+                <p class="text-sm text-gray-600">Village: Mojaitpur</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Soyad Islam
-            </h3>
-            <p class="text-sm text-gray-600">Village:Kuripara</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- alif -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/alif.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Abul Bashar Mukti</p>
-                    <p>Mother's Name: Mst Shema Khatun </p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01756988222 </p>
-                    <p>Bulbul College Pabna</p>
+            <!-- rana -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/rana.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: MD. Alauddin PK </p>
+                        <p>Mother's Name: MST. Momota Khatun </p>
+                        <p>Blood Group: AB(+) Positive</p>
+                        <p> 01720169185</p>
+                        <p>Dipchar,Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Md Shohel Rana</h3>
+                <p class="text-sm text-gray-600">Village: Dipchar, Pabna Ex-Cancury</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Alif Hossain
-            </h3>
-            <p class="text-sm text-gray-600">Village:Shayamnagar</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/tonmoy.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Topon Sorkar</p>
-                    <p>Mother's Name: Kolpona Sorkar</p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01516537218 </p>
-                    <p>Rajbari government College,Rajbari</p>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/nazmul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: কুদ্দুস প্রারামানিক </p>
+                        <p>Mother's Name: মর্জিনা খাতুন </p>
+                        <p>Blood Group: AB(+) Positive</p>
+                        <p> 01770569789 </p>
+                        <p>কিরগিজস্তান</p>
+                        <p class="w-10 h-8 bg-green-400"><i class="w-10 h-8 fa-duotone fa-solid fa-jet-fighter-up"></i>
+                        </p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold"> নাজমুল রানা</h3>
+                <p class="text-sm text-gray-600">Village: সাতবাড়ীয়া, তারাবাড়িয়া </p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Tonmoy Sorkar
-            </h3>
-            <p class="text-sm text-gray-600">Village:Satbaria</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- rabbi -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/rabbi.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: মো : রান্নু শেখ </p>
-                    <p>Mother's Name: মোছা : মুরশিদা খাতুন </p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>+880 1309-501178 </p>
-                    <p>মালেশিয়া</p>
+            <!-- shibu -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/siblu.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Dilip Kumar Haldar </p>
+                        <p>Mother's Name: Alpona Rane Haldar</p>
+                        <p>Blood Group: AB(+) Positive</p>
+                        <p>01991786933 </p>
+                        <p>Nichintopur</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Shibu Kumar Saurov </h3>
+                <p class="text-sm text-gray-600">Village:Nichintopur</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">রাব্বি </h3>
-            <p class="text-sm text-gray-600">Village:কাকিয়ান</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- anik mahmud -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/anik-mah.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: জিলাল প্রামানিক </p>
-                    <p>Mother's Name: হালিমা খাতুন </p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>+880 1766-357701 </p>
-                    <p>সিঙ্গাপুর </p>
+            <!-- raju -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/raju.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: মো: রাজ্জাক সরদার </p>
+                        <p>Mother's Name: মোছা:মরিয়ম খাতুন </p>
+                        <p>Blood Group: AB(-) Negative</p>
+                        <p>01305881863 </p>
+                        <p>Dhaka</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">রাশেদুল ইসলাম রাজু </h3>
+                <p class="text-sm text-gray-600">Village:Nichintopur</p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">মো অনিক মাহামুদ
-            </h3>
-            <p class="text-sm text-gray-600">Village:সাতবাড়ীয়া</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- Shahin -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/shahin.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Md.Osman Goni Sheikh </p>
-                    <p>Mother's Name: Mst.Taslima Khatun </p>
-                    <p>Blood Group: O(-) Positive</p>
-                    <p>01810340599</p>
-                    <p>Ashulia Savar Dhaka </p>
+            <!-- tariqul -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/tariqul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Abu Sayid </p>
+                        <p>Mother's Name: Tania Pravin </p>
+                        <p>Blood Group: A(+) positive</p>
+                        <p>01857362905 </p>
+                        <p>Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Toriqul Hassan </h3>
+                <p class="text-sm text-gray-600">Village:Tarabaria, Satbaria </p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Md Shahin Hossain
-            </h3>
-            <p class="text-sm text-gray-600">Village:Shayamnagar</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- anik -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/anik.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Arun Kumar Biswas </p>
-                    <p>Mother's Name: Aunjona Rani Biswas </p>
-                    <p>Blood Group: O(+) Positive</p>
-                    <p>01760314156</p>
-                    <p>Nowakhali, Ramganj, laxmipur. </p>
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/shuvo.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Md Sohidul Islam </p>
+                        <p>Mother's Name: Mst Shahanaj Parvin</p>
+                        <p>Blood Group: O(+) positive</p>
+                        <p>01854917348                        </p>
+                        <p>Ashulia,Savar,Dhaka</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Shajjad Hossain (Shuvo)
+                </h3>
+                <p class="text-sm text-gray-600">Village:Gabgachi </p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
                 </div>
             </div>
-            <h3 class="mt-4 text-lg font-bold">Anik Biswas
-            </h3>
-            <p class="text-sm text-gray-600">Village:Vatpara</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
         </div>
-        <!-- jolil -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/jolil.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: MD. MOFIZUDDIN PRAMANIK </p>
-                    <p>Mother's Name: MST. JULEKHA KHATUN </p>
-                    <p>Blood Group: A(+) Positive</p>
-                    <p> 08063831903</p>
-                    <p>Kobe city ,Japan</p>
-                    <p class="w-10 h-8 bg-green-400"><i class="w-10 h-8 fa-duotone fa-solid fa-jet-fighter-up"></i></p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">Md Abdul Jolil</h3>
-            <p class="text-sm text-gray-600">Village: Mojaitpur</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- rana -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/rana.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: MD. Alauddin PK </p>
-                    <p>Mother's Name: MST. Momota Khatun </p>
-                    <p>Blood Group: AB(+) Positive</p>
-                    <p> 01720169185</p>
-                    <p>Dipchar,Pabna</p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">Md Shohel Rana</h3>
-            <p class="text-sm text-gray-600">Village: Dipchar, Pabna Ex-Cancury</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/nazmul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: কুদ্দুস প্রারামানিক </p>
-                    <p>Mother's Name: মর্জিনা খাতুন </p>
-                    <p>Blood Group: AB(+) Positive</p>
-                    <p> 01770569789 </p>
-                    <p>কিরগিজস্তান</p>
-                    <p class="w-10 h-8 bg-green-400"><i class="w-10 h-8 fa-duotone fa-solid fa-jet-fighter-up"></i></p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold"> নাজমুল রানা</h3>
-            <p class="text-sm text-gray-600">Village: সাতবাড়ীয়া, তারাবাড়িয়া </p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- shibu -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/siblu.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Dilip Kumar Haldar </p>
-                    <p>Mother's Name: Alpona Rane Haldar</p>
-                    <p>Blood Group: AB(+) Positive</p>
-                    <p>01991786933 </p>
-                    <p>Nichintopur</p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">Shibu Kumar Saurov </h3>
-            <p class="text-sm text-gray-600">Village:Nichintopur</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- raju -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/raju.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: মো: রাজ্জাক সরদার </p>
-                    <p>Mother's Name: মোছা:মরিয়ম খাতুন </p>
-                    <p>Blood Group: AB(-) Negative</p>
-                    <p>01305881863 </p>
-                    <p>Dhaka</p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">রাশেদুল ইসলাম রাজু </h3>
-            <p class="text-sm text-gray-600">Village:Nichintopur</p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-        <!-- tariqul -->
-        <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-            <div class="relative avatar-container">
-                <img src="images/tariqul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
-                <div class="p-2 details-overlay rounded-xl">
-                    <p>Father's Name: Abu Sayid </p>
-                    <p>Mother's Name: Tania Pravin </p>
-                    <p>Blood Group: A(+) positive</p>
-                    <p>01857362905 </p>
-                    <p>Pabna</p>
-                </div>
-            </div>
-            <h3 class="mt-4 text-lg font-bold">Toriqul Hassan </h3>
-            <p class="text-sm text-gray-600">Village:Tarabaria, Satbaria </p>
-            <div class="mt-4 button-container">
-                <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
-                    onclick="toggleDetails(this)">
-                    Show Details
-                </button>
-            </div>
-        </div>
-
-
     </div>
 
+
+
+    <div class="flex justify-center mt-4">
+        <button id="prevBtn" class="px-4 py-2 mr-2 text-white bg-gray-400 rounded-lg">Previous</button>
+        <button id="nextBtn" class="px-4 py-2 text-white bg-blue-500 rounded-lg">Next</button>
+    </div>
+    <script src="javascript.js">
+    </script>
 
     <footer class="p-10 mx-auto mt-10 bg-orange-300 rounded-lg footer footer-center text-primary-content">
         <aside>
@@ -1348,68 +1379,11 @@
                     </svg>
                 </a>
             </div>
+
         </nav>
+
     </footer>
-    <script>
-        function toggleDetails(button) {
-            const overlay = button.closest('.card').querySelector('.details-overlay');
-            overlay.style.opacity = overlay.style.opacity === '1' ? '0' : '1';
-        }
 
-
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dotsContainer = document.querySelector('.dots');
-        let autoSlideInterval;
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-                dots[i].classList.toggle('active', i === index);
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        function createDots() {
-            slides.forEach((_, index) => {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                if (index === 0) dot.classList.add('active');
-                dot.addEventListener('click', () => {
-                    currentSlide = index;
-                    showSlide(index);
-                    resetAutoSlide();
-                });
-                dotsContainer.appendChild(dot);
-            });
-        }
-
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(nextSlide, 4000);
-        }
-
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
-        }
-
-        document.getElementById('nextBtn').addEventListener('click', () => { nextSlide(); resetAutoSlide(); });
-        document.getElementById('prevBtn').addEventListener('click', () => { prevSlide(); resetAutoSlide(); });
-        createDots();
-        const dots = document.querySelectorAll('.dot');
-        startAutoSlide();
-
-
-    </script>
 </body>
 
 </html>
