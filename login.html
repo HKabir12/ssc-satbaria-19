@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSC-2019</title>
+    <link rel="icon" href="images/Logo1.png">
+    <!-- <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div class="mt-0 bg-gradient-to-t from-[#EFEBE3] ">
+        <div>
+            <nav class="fixed top-0 left-0 right-0 mx-auto lg:w-3/4">
+                <div class="px-4 py-2 bg-white rounded-lg shadow-lg navbar">
+
+                    <div class="navbar-start">
+                        <!-- Mobile Dropdown -->
+                        <div class="dropdown">
+                            <label tabindex="0" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </label>
+                            <!-- Dropdown Menu -->
+                            <ul tabindex="0"
+                                class="absolute left-0 w-48 p-4 mt-3 space-y-2 bg-white rounded-lg shadow-lg menu menu-sm dropdown-content">
+
+                                <li class="flex justify-center mt-2 space-x-3">
+                                    <button class="btn btn-ghost btn-circle">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                        </svg>
+                                    </button>
+
+                                </li>
+                                <li><button class="w-full mt-2 btn btn-outline">Login</button></li>
+                                <li><button class="w-full mt-2 text-white btn btn-success">Register</button></li>
+                            </ul>
+                        </div>
+
+                        <!-- Logo -->
+                        <div class="hidden sm:justify-end sm:flex">
+                            <img src="images/Logo1.png" alt="Logo" class="h-14">
+                            <p></p>
+                        </div>
+
+                    </div>
+
+                    <div class="hidden space-x-4 lg:flex navbar-end">
+                        <button class="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 7 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+
+                        <button class="btn btn-outline"> <a href="login.html">Login</a>
+                        </button>
+                        <button
+                            class="w-32 font-bold text-white bg-green-800 btn hover:text-green-600">Register</button>
+                    </div>
+                    <div class="justify-end flex-1 lg:hidden ">
+                        <img src="images/Logo1.png" alt="Logo" class="h-14 ">
+                    </div>
+
+
+                </div>
+            </nav>
+
+            <!-- navbar -->
+        </div>
+
+
+    </div>
+    <!-- text -->
+    <h1 class="mx-auto my-10 mt-20 text-4xl font-bold text-center glowing-border lg:w-3/4">SATBARIA HIGH SCHOOL SSC
+        BATCH 2019</h1>
+    <div class="mx-auto lg:w-3/4 hero bg-base-200">
+        <div class="flex-col hero-content lg:flex-row-reverse">
+          <div class="w-full max-w-sm shadow-2xl card bg-base-100 shrink-0">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Email</span>
+                </label>
+                <input type="email" placeholder="email" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Password</span>
+                </label>
+                <input type="password" placeholder="password" class="input input-bordered" required />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                </label>
+              </div>
+              <div class="mt-6 form-control">
+                <button class="btn btn-primary">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
