@@ -190,71 +190,71 @@
 
     <!-- navbar -->
     <!-- navbar -->
-    <div class="mt-0 bg-gradient-to-t from-[#EFEBE3] mb-20  ">
-        <div>
-            <nav class="fixed top-0 left-0 right-0 mx-auto lg:w-3/4">
-                <div class="px-4 py-2 bg-white rounded-lg shadow-lg navbar">
-
-                    <div class="navbar-start">
-                        <!-- Mobile Dropdown -->
-                        <div class="dropdown">
-                            <label tabindex="0" class="btn btn-ghost lg:hidden">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 6h16M4 12h16M4 18h16" />
-                                </svg>
-                            </label>
-                            <!-- Dropdown Menu -->
-                            <ul tabindex="0"
-                                class="absolute left-0 w-48 p-4 mt-3 space-y-2 bg-white rounded-lg shadow-lg menu menu-sm dropdown-content">
-
-                                <li class="flex justify-center mt-2 space-x-3">
-                                    <button class="btn btn-ghost btn-circle">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                        </svg>
-                                    </button>
-
-                                </li>
-                                <li><button class="w-full mt-2 btn btn-outline"><a href="login.html">Login</a>
-
-                                    </button></li>
-                                <li><button class="w-full mt-2 text-white btn btn-success">Register</button></li>
-                            </ul>
-                        </div>
-
-                        <!-- Logo -->
-                        <div class="hidden sm:justify-end sm:flex">
-                            <img src="images/Logo1.png" alt="Logo" class="h-14">
-                            <p></p>
-                        </div>
-
-                    </div>
-
-                    <div class="hidden space-x-4 lg:flex navbar-end">
-                        <button class="btn btn-ghost btn-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-6" fill="none" viewBox="0 0 24 24"
+    <div class="mt-0 bg-gradient-to-t from-[#EFEBE3] mb-20">
+        <nav class="fixed top-0 left-0 right-0 mx-auto bg-white rounded-lg shadow-lg lg:w-3/4">
+            <div class="px-4 py-2 navbar">
+                <!-- Left Section -->
+                <div class="navbar-start">
+                    <!-- Mobile Dropdown -->
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 21l-6-6m2-5a7 7 7 11-14 0 7 7 0 0114 0z" />
+                                    d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
-                        </button>
-
-                        <button class="btn btn-outline"> <a href="login.html">Login</a>
-                        </button>
-                        <button
-                            class="w-32 font-bold text-white bg-green-800 btn hover:text-green-600">Register</button>
+                        </label>
+                        <!-- Dropdown Menu -->
+                        <ul tabindex="0" class="absolute left-0 w-48 p-4 mt-3 space-y-2 bg-white rounded-lg shadow-lg menu menu-sm dropdown-content">
+                            <li class="flex justify-center mt-2 space-x-3">
+                                <button class="btn btn-ghost btn-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 7 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="w-full mt-2 btn btn-outline">
+                                    <a href="login.html">Login</a>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="w-full mt-2 text-white btn btn-success">Register</button>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="justify-end flex-1 lg:hidden ">
-                        <img src="images/Logo1.png" alt="Logo" class="h-14 ">
+    
+                    <!-- Logo for Large Screens -->
+                    <div class="hidden lg:flex">
+                        <img src="images/Logo1.png" alt="Logo" class="h-14">
                     </div>
-
-
                 </div>
-            </nav>
+    
+                <!-- Center Section (Hidden for Small Screens) -->
+                <div class="hidden space-x-4 lg:flex navbar-end">
+                    <button class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 7 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    <button class="btn btn-outline">
+                        <a href="login.html">Login</a>
+                    </button>
+                    <button class="w-32 font-bold text-white bg-green-800 btn hover:bg-green-700">Register</button>
+                </div>
+    
+                <!-- Logo for Small Screens -->
+                <div class="flex justify-end flex-1 lg:hidden">
+                    <img src="images/Logo1.png" alt="Logo" class="h-14">
+                </div>
+            </div>
+        </nav>
+    </div>
+    
 
             <!-- navbar -->
         </div>
@@ -1316,13 +1316,36 @@
                         <p>Father's Name: Md Sohidul Islam </p>
                         <p>Mother's Name: Mst Shahanaj Parvin</p>
                         <p>Blood Group: O(+) positive</p>
-                        <p>01854917348                        </p>
+                        <p>01854917348 </p>
                         <p>Ashulia,Savar,Dhaka</p>
                     </div>
                 </div>
                 <h3 class="mt-4 text-lg font-bold">Shajjad Hossain (Shuvo)
                 </h3>
                 <p class="text-sm text-gray-600">Village:Gabgachi </p>
+                <div class="mt-4 button-container">
+                    <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
+                        onclick="toggleDetails(this)">
+                        Show Details
+                    </button>
+                </div>
+            </div>
+            <!-- fahim -->
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+                <div class="relative avatar-container">
+                    <img src="images/fahim.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
+                    <div class="p-2 details-overlay rounded-xl">
+                        <p>Father's Name: Saifur Rahman
+                        </p>
+                        <p>Mother's Name: Fatema khatun </p>
+                        <p>Blood Group: A(+) positive</p>
+                        <p>01799692465 </p>
+                        <p>Pabna</p>
+                    </div>
+                </div>
+                <h3 class="mt-4 text-lg font-bold">Abdullah Fahim
+                </h3>
+                <p class="text-sm text-gray-600">Village:Vatpara </p>
                 <div class="mt-4 button-container">
                     <button class="w-32 px-4 py-2 text-white transition bg-blue-500 rounded-lg hover:bg-blue-600"
                         onclick="toggleDetails(this)">
