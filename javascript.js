@@ -1,3 +1,13 @@
+let cardWrapper1 = document.getElementById("cardWrapper");
+
+// Count only <div> elements that have the "count" attribute
+let countedDivs = cardWrapper1.querySelectorAll("div[count]").length;
+
+// Display the count inside the <span>
+document.getElementById("result").innerText = countedDivs;
+
+
+
 function toggleDetails(button) {
   const overlay = button.closest(".card").querySelector(".details-overlay");
   overlay.style.opacity = overlay.style.opacity === "1" ? "0" : "1";
@@ -61,34 +71,36 @@ const dots = document.querySelectorAll(".dot");
 startAutoSlide();
 
 ///slider
-const cards = document.querySelectorAll('.card');
-        const cardWrapper = document.getElementById('cardWrapper');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const itemsPerPage = 8;
-        let currentIndex = 0;
-    
-        function showCards() {
-            cardWrapper.innerHTML = '';
-            for (let i = currentIndex; i < currentIndex + itemsPerPage; i++) {
-                if (cards[i]) {
-                    cardWrapper.appendChild(cards[i]);
-                }
-            }
-        }
-    
-        prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex -= itemsPerPage;
-                showCards();
-            }
-        });
-    
-        nextBtn.addEventListener('click', () => {
-            if (currentIndex + itemsPerPage < cards.length) {
-                currentIndex += itemsPerPage;
-                showCards();
-            }
-        });
-    
-        showCards();
+const cards = document.querySelectorAll(".card");
+const cardWrapper = document.getElementById("cardWrapper");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const itemsPerPage = 8;
+let currentIndex = 0;
+
+function showCards() {
+  cardWrapper.innerHTML = "";
+  for (let i = currentIndex; i < currentIndex + itemsPerPage; i++) {
+    if (cards[i]) {
+      cardWrapper.appendChild(cards[i]);
+    }
+  }
+}
+
+prevBtn.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex -= itemsPerPage;
+    showCards();
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  if (currentIndex + itemsPerPage < cards.length) {
+    currentIndex += itemsPerPage;
+    showCards();
+  }
+});
+
+showCards();
+
+// total of

@@ -205,11 +205,12 @@
                             </svg>
                         </label>
                         <!-- Dropdown Menu -->
-                        <ul tabindex="0" class="absolute left-0 w-48 p-4 mt-3 space-y-2 bg-white rounded-lg shadow-lg menu menu-sm dropdown-content">
+                        <ul tabindex="0"
+                            class="absolute left-0 w-48 p-4 mt-3 space-y-2 bg-white rounded-lg shadow-lg menu menu-sm dropdown-content">
                             <li class="flex justify-center mt-2 space-x-3">
                                 <button class="btn btn-ghost btn-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M21 21l-6-6m2-5a7 7 7 11-14 0 7 7 0 0114 0z" />
                                     </svg>
@@ -225,13 +226,13 @@
                             </li>
                         </ul>
                     </div>
-    
+
                     <!-- Logo for Large Screens -->
                     <div class="hidden lg:flex">
                         <img src="images/Logo1.png" alt="Logo" class="h-14">
                     </div>
                 </div>
-    
+
                 <!-- Center Section (Hidden for Small Screens) -->
                 <div class="hidden space-x-4 lg:flex navbar-end">
                     <button class="btn btn-ghost btn-circle">
@@ -246,7 +247,7 @@
                     </button>
                     <button class="w-32 font-bold text-white bg-green-800 btn hover:bg-green-700">Register</button>
                 </div>
-    
+
                 <!-- Logo for Small Screens -->
                 <div class="flex justify-end flex-1 lg:hidden">
                     <img src="images/Logo1.png" alt="Logo" class="h-14">
@@ -254,13 +255,10 @@
             </div>
         </nav>
     </div>
-    
-
-            <!-- navbar -->
-        </div>
 
 
-    </div>
+   
+
     <!-- text -->
     <h1 class="mx-auto my-10 mt-20 text-4xl font-bold text-center glowing-border lg:w-3/4">SATBARIA HIGH SCHOOL SSC
         BATCH 2019</h1>
@@ -271,7 +269,7 @@
                     class="text-red-700"> ইফতার দোয়া মাহফিল ও রনজিত স্যারের সম্মাননা</h>
                 দেওয়া হবে। সবাইকে উপস্থিত থাকার জন্য বিশেষ অনুরোধ করা হলো </p>
         </marquee>
-    </div>
+    </div >
     <!-- slider img -->
     <div class="w-full max-w-3xl mx-auto mb-10 rounded-lg shadow-lg slider-container">
         <div class="slide active " style="background-image: url('images/Ramadan24.jpg');">
@@ -293,14 +291,16 @@
         </div>
         <div class="dots"></div>
     </div>
-
+    <div>
+        <h2 class="mx-auto my-10 text-xl font-bold text-center w-72 glowing-border">Friends of this Present <span id="result"></span></h2>
+    </div>
     <!-- Responsive Grid -->
-    <div id="cardContainer" class="relative flex w-full overflow-hidden">
+    <div id="cardContainer" class="relative flex w-full overflow-hidden " >
         <div class="grid grid-cols-2 gap-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:w-3/4 slider"
-            id="cardWrapper">
+            id="cardWrapper" id="targetDiv">
             <!-- Cards go here -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
-                <div class="relative avatar-container">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" id="targetDiv  " count >
+                <div class="relative avatar-container" count >
                     <img src="images/kabir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
                         <p>Father's Name: Darog Ali Biswas</p>
@@ -322,7 +322,7 @@
             </div>
 
             <!-- salim -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/salim.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -343,7 +343,7 @@
                 </div>
             </div>
             <!-- ashik -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/ashik.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -364,7 +364,7 @@
                 </div>
             </div>
 
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/azad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -385,7 +385,7 @@
                 </div>
             </div>
             <!-- sikto -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/sikto.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -407,7 +407,7 @@
                 </div>
             </div>
             <!-- mithu -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/mithu.jpg" alt="Mithu" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -428,7 +428,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/rifat.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -449,7 +449,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/amir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -471,7 +471,7 @@
                 </div>
             </div>
             <!-- zabir -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/zabir.jpg" alt="Zabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -494,7 +494,7 @@
             </div>
 
             <!-- Duplicate Cards -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/ashraful.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -515,7 +515,7 @@
                 </div>
             </div>
 
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/saki.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -536,7 +536,7 @@
                 </div>
             </div>
 
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/nishad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -557,7 +557,7 @@
                 </div>
             </div>
             <!-- sajid -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/sajid.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -578,7 +578,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/zihad.jpg" alt="Mithu" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -599,7 +599,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/antu.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -621,7 +621,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/ashik-juna.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -642,7 +642,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/opi.png" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -664,7 +664,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/robiul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -687,7 +687,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/angkur.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -712,7 +712,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/abdullah.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -737,7 +737,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/shovon.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -762,7 +762,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/riyad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -787,7 +787,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/nasir.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -812,7 +812,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/ratul.jpg" alt="Ratul" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -837,7 +837,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border" count>
                 <div class="relative avatar-container">
                     <img src="images/babul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -858,7 +858,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/jihad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -879,7 +879,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/tuhin.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -900,7 +900,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/hossain.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -921,7 +921,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/atik.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -942,7 +942,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/shakil.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -964,7 +964,7 @@
                 </div>
             </div>
 
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/bulbul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -986,7 +986,7 @@
                 </div>
             </div>
             <!-- kiiron -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/kiron.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1008,7 +1008,7 @@
                 </div>
             </div>
             <!-- shawon -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/Shayon.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1029,7 +1029,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/soyad.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1051,7 +1051,7 @@
                 </div>
             </div>
             <!-- alif -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/alif.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1072,7 +1072,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/tonmoy.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1094,7 +1094,7 @@
                 </div>
             </div>
             <!-- rabbi -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/rabbi.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1115,7 +1115,7 @@
                 </div>
             </div>
             <!-- anik mahmud -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/anik-mah.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1137,7 +1137,7 @@
                 </div>
             </div>
             <!-- Shahin -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/shahin.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1159,7 +1159,7 @@
                 </div>
             </div>
             <!-- anik -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/anik.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1181,7 +1181,7 @@
                 </div>
             </div>
             <!-- jolil -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/jolil.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1204,7 +1204,7 @@
                 </div>
             </div>
             <!-- rana -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/rana.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1224,7 +1224,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/nazmul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1247,7 +1247,7 @@
                 </div>
             </div>
             <!-- shibu -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/siblu.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1268,7 +1268,7 @@
                 </div>
             </div>
             <!-- raju -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/raju.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1289,7 +1289,7 @@
                 </div>
             </div>
             <!-- tariqul -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/tariqul.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1309,7 +1309,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/shuvo.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1331,7 +1331,7 @@
                 </div>
             </div>
             <!-- fahim -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/fahim.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1354,15 +1354,15 @@
                 </div>
             </div>
             <!--  Jahid-->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/jahid.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
                         <p>Father's Name:Habibur Rahaman </p>
                         <p>Mother's Name: Rekha khatun </p>
                         <p>Blood Group: O(+) positive</p>
-                        <p>01302406925                        </p>
-                        <p>Tejgaon College dhaka                        </p>
+                        <p>01302406925 </p>
+                        <p>Tejgaon College dhaka </p>
                     </div>
                 </div>
                 <h3 class="mt-4 text-lg font-bold">Jahidul Islam
@@ -1376,15 +1376,15 @@
                 </div>
             </div>
 
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/saurav.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
-                        <p>Father's Name:Md Mabud Ali                        </p>
+                        <p>Father's Name:Md Mabud Ali </p>
                         <p>Mother's Name: .......</p>
                         <p>Blood Group: O(+) positive</p>
-                        <p>01758-149047                        </p>
-                        <p>Tejgaon College dhaka                        </p>
+                        <p>01758-149047 </p>
+                        <p>Tejgaon College dhaka </p>
                     </div>
                 </div>
                 <h3 class="mt-4 text-lg font-bold">Md Saurav Hossain
@@ -1398,7 +1398,7 @@
                     </button>
                 </div>
             </div>
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/emonmondal.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
@@ -1406,7 +1406,7 @@
                         <p>Mother's Name: Mst Sabina Khatun</p>
                         <p>Blood Group: O(+) positive</p>
                         <p> ±6596117679 </p>
-                        <p> Singapore   </p>
+                        <p> Singapore </p>
                     </div>
                 </div>
                 <h3 class="mt-4 text-lg font-bold">Md Easin Arafat
@@ -1421,14 +1421,14 @@
                 </div>
             </div>
             <!-- hasan -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/hasan.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
-                        <p>Father's Name:Unus Khan                       </p>
+                        <p>Father's Name:Unus Khan </p>
                         <p>Mother's Name: Hashina khatun</p>
                         <p>Blood Group: AB(+) positive</p>
-                        <p> 01779457562     </p>
+                        <p> 01779457562 </p>
                         <p>Tungi Gazipur </p>
                     </div>
                 </div>
@@ -1444,14 +1444,14 @@
                 </div>
             </div>
             <!-- emon -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/emon.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
-                        <p>Father's Name:MD Tofazzal Hossain                         </p>
-                        <p>Mother's Name: Mst Yeasmin Parvin                        </p>
+                        <p>Father's Name:MD Tofazzal Hossain </p>
+                        <p>Mother's Name: Mst Yeasmin Parvin </p>
                         <p>Blood Group: B(+) positive</p>
-                        <p> 01933895400    </p>
+                        <p> 01933895400 </p>
                         <p>Pabna </p>
                     </div>
                 </div>
@@ -1467,14 +1467,14 @@
                 </div>
             </div>
             <!-- hasib -->
-            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border">
+            <div class="relative w-full max-w-xs p-1 mx-auto text-center bg-white shadow-xl card glowing-border"count>
                 <div class="relative avatar-container">
                     <img src="images/hasib.jpg" alt="Kabir" class="mx-auto rounded-xl h-72 w-60">
                     <div class="p-2 details-overlay rounded-xl">
-                        <p>Father's Name:Abdul Lotif Sheikh                         </p>
-                        <p>Mother's Name: Forida parvin                        </p>
+                        <p>Father's Name:Abdul Lotif Sheikh </p>
+                        <p>Mother's Name: Forida parvin </p>
                         <p>Blood Group: O(+) positive</p>
-                        <p> 01406555993   </p>
+                        <p> 01406555993 </p>
                         <p>Pabna </p>
                     </div>
                 </div>
@@ -1488,7 +1488,7 @@
                     </button>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
